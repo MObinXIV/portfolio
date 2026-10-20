@@ -1,5 +1,8 @@
 :root {
     --bg: #000;
+    --surface: #161616;
+    --surface-2: #262626;
+    --border: #2e2e2e;
     --text: #fff;
     --muted: #b5b5b5;
     --warm: antiquewhite;
@@ -25,6 +28,60 @@ body {
 
 .container {
     padding: 10px 10%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ------- buttons ------- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    background: #d60043;
+    border-color: #d60043;
+}
+
+.btn-outline {
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-small {
+    padding: 8px 18px;
+    font-size: 14px;
+}
+
+.btn.is-disabled {
+    background: transparent;
+    border-color: var(--border);
+    color: #777;
+    cursor: not-allowed;
+}
+
+.btn.is-disabled:hover {
+    background: transparent;
+    border-color: var(--border);
 }
 
 /* ------- header ------- */
@@ -81,11 +138,6 @@ nav ul li a:focus-visible::after {
     width: 100%;
 }
 
-a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-}
-
 .header-text {
     margin-top: 10%;
     max-width: 50%;
@@ -111,9 +163,42 @@ a:focus-visible {
     line-height: 1.6;
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* ------- shared section styles ------- */
+section {
+    padding: 80px 0;
+}
+
+.sub-title {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.tags li {
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
 /* ------- about ------- */
 #about {
-    padding: 80px 0;
     color: var(--muted);
 }
 
@@ -142,10 +227,7 @@ a:focus-visible {
     min-width: 280px;
 }
 
-.sub-title {
-    font-size: clamp(36px, 5vw, 60px);
-    font-weight: 600;
-    color: var(--text);
+.about-col-2 .sub-title {
     margin-bottom: 20px;
 }
 
@@ -155,7 +237,7 @@ a:focus-visible {
 }
 
 .tab-contents {
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
 .tab-contents ul li {
@@ -175,6 +257,196 @@ a:focus-visible {
     margin-top: 4px;
     font-size: 15px;
     line-height: 1.6;
+}
+
+/* ------- skills ------- */
+#skills {
+    padding-top: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.skill-group h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+/* ------- services ------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.service {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+    transition: border-color 0.3s;
+}
+
+.service:hover {
+    border-color: var(--accent);
+}
+
+.service h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ------- projects ------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.project:hover {
+    border-color: var(--accent);
+}
+
+.project-media {
+    aspect-ratio: 16 / 9;
+    background: var(--surface-2);
+}
+
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1b1b1b, #2b2b2b);
+    color: var(--accent);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+    padding: 24px;
+}
+
+.project-body h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.project-body p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+/* ------- contact ------- */
+.contact-left {
+    flex-basis: 40%;
+}
+
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-links {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact-links li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.contact-links span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact-links a {
+    color: var(--text);
+    font-size: 17px;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+}
+
+#contact-form label {
+    display: block;
+    margin: 16px 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--surface-2);
+    border: none;
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form .btn {
+    margin-top: 24px;
+}
+
+footer {
+    padding: 30px 10%;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
 }
 
 /* ------- tablet and mobile ------- */
@@ -219,16 +491,22 @@ a:focus-visible {
         margin-top: 18%;
     }
 
-    #about {
+    section {
         padding: 50px 0;
     }
 
     .about-col-1,
-    .about-col-2 {
+    .about-col-2,
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
     }
 
     .about-col-1 img {
         max-height: 420px;
+    }
+
+    footer {
+        padding: 24px 6%;
     }
 }
