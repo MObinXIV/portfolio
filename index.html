@@ -3,28 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personal Portfolio</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Mohamed Rezq | Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Mohamed Rezq, a full-stack developer focused on Java and Spring Boot.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
+
+    <!-- -------- header / hero ------- -->
+    <header id="header">
         <div class="container">
             <nav>
-                <div class="space"></div>
+                <div class="logo"><h1>M.Rezq</h1></div>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="header-text">
-                <p>Full-Stack Developer</p>
-                <h1>Hi, I'm <span>Mohamed</span>👋</h1>
+                <p class="role">Full-Stack Developer</p>
+                <h1>Hi, I'm <span>Mohamed Rezq</span> 👋</h1>
+                <p class="intro">
+                    Passionate software engineer building scalable, high-performance web applications,
+                    with a focus on optimizing systems, automating workflows, and improving efficiency.
+                </p>
             </div>
         </div>
-    </div>
-    
+    </header>
+
+    <!-- -------- about ------- -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Pic1.jpg" alt="Portrait of Mohamed Rezq">
+                </div>
+
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>
+                        I'm a full-stack developer with a Computer Science degree from Benha University and
+                        hands-on experience maintaining enterprise systems. I build full-stack projects that
+                        tackle real-world problems, like secure APIs, real-time messaging, and microservices,
+                        and I pair them with Angular on the frontend. I also share what I learn through
+                        technical articles and posts.
+                    </p>
+
+                    <div class="tab-contents">
+                        <ul>
+                            <li>
+                                <span>Web Development</span>
+                                <p>Developing full-stack web applications.</p>
+                            </li>
+                            <li>
+                                <span>Analysis &amp; Design</span>
+                                <p>Analyzing systems from requirements and design through to deployment.</p>
+                            </li>
+                            <li>
+                                <span>Additional Skills</span>
+                                <p>Experience solving software problems and working across multiple languages, including C++, Java, JavaScript, Python, HTML, and CSS.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
