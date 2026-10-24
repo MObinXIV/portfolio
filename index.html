@@ -3,188 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Rezq | Full-Stack Developer</title>
-    <meta name="description" content="Portfolio of Mohamed Rezq, a full-stack developer focused on Java and Spring Boot.">
+    <meta name="theme-color" content="#0b0e0d">
+    <meta name="description" content="Mohamed Rezq is a software engineer focused on Java, Spring Boot, Angular, and thoughtful web applications.">
+    <meta property="og:title" content="Mohamed Rezq — Software Engineer">
+    <meta property="og:description" content="Backend-focused software engineer building useful web applications with Java, Spring Boot, and Angular.">
+    <meta property="og:type" content="website">
+    <title>Mohamed Rezq — Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- -------- header / hero ------- -->
-    <header id="header">
+    <header class="site-header" id="home">
         <div class="container">
-            <nav>
-                <div class="logo"><h1>M.Rezq</h1></div>
-                <ul>
-                    <li><a href="#header">Home</a></li>
+            <nav class="nav" aria-label="Main navigation">
+                <a class="brand" href="#home" aria-label="Mohamed Rezq, home">
+                    <span class="brand-mark">MR</span>
+                    <span>Mohamed Rezq<span class="brand-dot">.</span></span>
+                </a>
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#toolkit">Toolkit</a></li>
+                    <li><a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </nav>
 
-            <div class="header-text">
-                <p class="role">Full-Stack Developer</p>
-                <h1>Hi, I'm <span>Mohamed Rezq</span> 👋</h1>
-                <p class="intro">
-                    Passionate software engineer building scalable, high-performance web applications,
-                    with a focus on optimizing systems, automating workflows, and improving efficiency.
-                </p>
-                <div class="hero-actions">
-                    <!-- CV: put your file at cv/Mohamed_Rezq_CV.pdf -->
-                    <a class="btn" href="cv/Mohamed_Rezq_CV.pdf" download="Mohamed_Rezq_CV.pdf">Download CV</a>
-                    <a class="btn btn-outline" href="#projects">View projects</a>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-line"></span> Software engineer · backend focused</p>
+                    <h1 id="hero-title">Building useful software, <span>one system at a time.</span></h1>
+                    <p class="hero-description">
+                        I’m Mohamed, a computer science graduate who enjoys turning complex ideas into clear,
+                        dependable applications. I work mainly with Java and Spring Boot, and build across the stack with Angular.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+                        <a class="button button-quiet" href="cv/Mohamed_Rezq_CV.pdf" download="Mohamed_Rezq_CV.pdf">Download CV <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="hero-stack" aria-label="Core technologies">
+                        <span>Java</span><span>Spring Boot</span><span>Angular</span>
+                    </div>
                 </div>
-            </div>
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <img src="images/pic2.jpg" alt="Mohamed Rezq" fetchpriority="high">
+                        <span class="portrait-caption">MOHAMED REZQ <span>— SOFTWARE ENGINEER</span></span>
+                    </div>
+                    <div class="focus-card">
+                        <span class="focus-label"><span class="status-dot"></span> CURRENT FOCUS</span>
+                        <strong>Book Social Network</strong>
+                        <span>Full-stack project · in progress</span>
+                    </div>
+                    <span class="visual-index" aria-hidden="true">01 / 03</span>
+                </div>
+            </section>
+            <div class="hero-bottom"><span>Curiosity, craft, and a little bit of caffeine.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
         </div>
     </header>
 
-    <!-- -------- about ------- -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/pic1.jpg" alt="Portrait of Mohamed Rezq">
+    <main>
+        <section class="section about-section" id="about" aria-labelledby="about-title">
+            <div class="container about-layout">
+                <div class="section-heading">
+                    <p class="eyebrow"><span class="eyebrow-line"></span> A little about me</p>
+                    <h2 id="about-title">Curious by default.<br><span>Careful by design.</span></h2>
                 </div>
-
-                <div class="about-col-2">
-                    <h2 class="sub-title">About Me</h2>
-                    <p>
-                        I'm a full-stack developer with a Computer Science degree from Benha University and
-                        hands-on experience maintaining enterprise systems. I build full-stack projects that
-                        tackle real-world problems, like secure APIs, real-time messaging, and microservices,
-                        and I pair them with Angular on the frontend. I also share what I learn through
-                        technical articles and posts.
+                <div class="about-copy">
+                    <p class="about-lead">
+                        I’m a software engineer with a Computer Science degree from Benha University and experience
+                        maintaining enterprise systems.
                     </p>
+                    <p>
+                        I’m especially drawn to backend engineering: designing APIs, shaping data, and making the
+                        pieces of an application work well together. I also enjoy building the frontend that brings
+                        those systems to life. Right now, I’m developing a full-stack book-sharing app and sharing
+                        the code as it takes shape.
+                    </p>
+                    <a class="text-link" href="#contact">More about what I do <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
 
-                    <div class="tab-contents">
-                        <ul>
-                            <li>
-                                <span>Web Development</span>
-                                <p>Developing full-stack web applications.</p>
-                            </li>
-                            <li>
-                                <span>Analysis &amp; Design</span>
-                                <p>Analyzing systems from requirements and design through to deployment.</p>
-                            </li>
-                            <li>
-                                <span>Additional Skills</span>
-                                <p>Experience solving software problems and working across multiple languages, including C++, Java, JavaScript, Python, HTML, and CSS.</p>
-                            </li>
-                        </ul>
+        <section class="section work-section" id="work" aria-labelledby="work-title">
+            <div class="container">
+                <div class="work-heading">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span> Selected work</p>
+                        <h2 id="work-title">Projects in progress.<br><span>Code in the open.</span></h2>
                     </div>
+                    <p class="work-intro">
+                        These projects are still being built and tested. None are deployed yet, so there are no live demos to share—just the code and the work behind it.
+                    </p>
+                </div>
+                <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+                <p class="projects-note"><span class="status-dot"></span> No public demos yet — I’ll add them here when a project is ready.</p>
+            </div>
+        </section>
 
-                    <a class="btn about-cv" href="cv/Mohamed_Rezq_CV.pdf" download="Mohamed_Rezq_CV.pdf">Download CV</a>
+        <section class="section toolkit-section" id="toolkit" aria-labelledby="toolkit-title">
+            <div class="container toolkit-layout">
+                <div class="toolkit-heading">
+                    <p class="eyebrow"><span class="eyebrow-line"></span> Tools I reach for</p>
+                    <h2 id="toolkit-title">The right tool<br><span>for the problem.</span></h2>
+                    <p>My current toolkit, built through hands-on projects and day-to-day problem solving.</p>
+                </div>
+                <div class="toolkit-groups">
+                    <div class="toolkit-group">
+                        <h3>Backend</h3>
+                        <ul class="tags"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JPA / Hibernate</li><li>REST APIs</li></ul>
+                    </div>
+                    <div class="toolkit-group">
+                        <h3>Frontend</h3>
+                        <ul class="tags"><li>Angular</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+                    </div>
+                    <div class="toolkit-group">
+                        <h3>Data &amp; infrastructure</h3>
+                        <ul class="tags"><li>PostgreSQL</li><li>MongoDB</li><li>Docker</li><li>Kafka</li><li>GitHub Actions</li></ul>
+                    </div>
+                    <div class="toolkit-group">
+                        <h3>Also familiar with</h3>
+                        <ul class="tags"><li>Keycloak</li><li>WebSocket</li><li>Oracle</li><li>C++</li><li>Python</li></ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- -------- skills ------- -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="sub-title">Tech Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3>Backend</h3>
-                    <ul class="tags">
-                        <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JPA / Hibernate</li><li>Kafka</li><li>Keycloak</li>
-                    </ul>
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span> Say hello</p>
+                    <h2 id="contact-title">Have a good problem<br><span>to solve?</span></h2>
+                    <p class="contact-intro">I’d be glad to hear about it. Reach out and let’s start a conversation.</p>
+                    <a class="button button-primary" href="mailto:mohamedrezqk@gmail.com">Email me <span aria-hidden="true">↗</span></a>
                 </div>
-                <div class="skill-group">
-                    <h3>Frontend</h3>
-                    <ul class="tags">
-                        <li>Angular</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Data &amp; DevOps</h3>
-                    <ul class="tags">
-                        <li>PostgreSQL</li><li>Oracle</li><li>MongoDB</li><li>Docker</li><li>GitHub Actions</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Languages</h3>
-                    <ul class="tags">
-                        <li>Java</li><li>C++</li><li>Python</li><li>JavaScript</li><li>SQL</li>
-                    </ul>
+                <div class="contact-details">
+                    <a href="mailto:mohamedrezqk@gmail.com"><span>Email</span>mohamedrezqk@gmail.com <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/MObinXIV" target="_blank" rel="noopener noreferrer"><span>GitHub</span>github.com/MObinXIV <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/mohamed-rezq-205224249/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>linkedin.com/in/mohamed-rezq <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- -------- services ------- -->
-    <section id="services">
-        <div class="container">
-            <h2 class="sub-title">Services</h2>
-            <div class="services-grid">
-                <article class="service">
-                    <h3>Backend Development</h3>
-                    <p>REST APIs with Java and Spring Boot, secured with JWT or Keycloak and backed by PostgreSQL or Oracle.</p>
-                </article>
-                <article class="service">
-                    <h3>Full-Stack Web Apps</h3>
-                    <p>End-to-end applications with an Angular frontend and a Spring Boot backend, from requirements to deployment.</p>
-                </article>
-                <article class="service">
-                    <h3>Microservices &amp; Docker</h3>
-                    <p>Service discovery, messaging with Kafka, and containerized setups with Docker Compose.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- -------- projects ------- -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="sub-title">Projects</h2>
-            <!-- Cards are generated by script.js from the PROJECTS list -->
-            <div class="projects-grid" id="projects-grid"></div>
-        </div>
-    </section>
-
-    <!-- -------- contact ------- -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h2 class="sub-title">Contact Me</h2>
-                    <ul class="contact-links">
-                        <!-- Replace the placeholder values below -->
-                        <li><span>Email</span><a href="mohamedrezqk@gmail.com">mohamedrezqk@gmail.com</a></li>
-                        <li><span>GitHub</span><a href="https://github.com/MObinXIV" target="_blank" rel="noopener noreferrer">github.com/MObinXIV</a></li>
-                        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/mohamed-rezq-205224249/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mohamed-rezq</a></li>
-                        <li><span>LeetCode</span><a href="https://leetcode.com/u/mobinxiv/" target="_blank" rel="noopener noreferrer">leetcode.com/u/mobinxiv</a></li>
-                        <li><span>Codeforces</span><a href="https://codeforces.com/profile/mobinxiv" target="_blank" rel="noopener noreferrer">codeforces.com/profile/mobinxiv</a></li>
-                    </ul>
-                    <a class="btn" href="cv/Mohamed_Rezq_CV.pdf" download="Mohamed_Rezq_CV.pdf">Download CV</a>
-                </div>
-
-                <div class="contact-right">
-                    <form id="contact-form">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required>
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
-
-                        <button type="submit" class="btn">Send message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Mohamed Rezq. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container"><a class="brand" href="#home"><span class="brand-mark">MR</span><span>Mohamed Rezq<span class="brand-dot">.</span></span></a><p>Made with care · <span id="year"></span></p><a href="#home">Back to top ↑</a></div>
     </footer>
-
 </body>
 </html>
